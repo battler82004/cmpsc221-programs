@@ -1,0 +1,9 @@
+If annual interest is 5% --> 0.05
+Use double instead of BigDecimal
+Use formatted print (%.2f) instead of rounding for output
+printf: "%-8.2f"
+	% -> tells you next part is formatted
+	- -> left justifies the set width
+	8 -> the set width
+	.2 -> 2 decimal places
+	f -> float/double

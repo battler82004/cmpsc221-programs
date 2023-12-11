@@ -1,0 +1,2 @@
+ArrayList of various loans, loop through each and print out data polymorphically
+Take assignment 2 and add Customer class and change code in main()

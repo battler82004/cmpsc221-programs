@@ -1,0 +1,7 @@
+Can't use the same LoanAccount class from PA1, need to modify it some
+	Change some and add others
+PMI is making up for the lack of 20% down payment
+	20% for down payment because the bank knows they can get the remaining 80% from selling the house
+	This is bank getting you to reach the 20% without a full downpayment
+Unsecured loan means that there is no collateral (very high interest cause more risk)
+Main code is given to make sure that the output is consistent

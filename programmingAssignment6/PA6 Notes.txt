@@ -1,0 +1,6 @@
+Copy template for PA
+Watch the video
+The different sections of the output on Canvas are:
+	1. From the template code (use as reference for formatting)
+	2-4. Parts a through c
+Don't use .map for c, use streams to solve in any way that works

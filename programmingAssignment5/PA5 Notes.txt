@@ -1,0 +1,30 @@
+Frame w/ title
+Top section determines what to draw, panel lets them draw
+Below tells mouse location on the panel
+Combo box with shape options
+2 colors, popup color picker window
+Undo gets rid of last thing, clear removes everything
+Nongradient just uses color 1
+JSpinner to select line width and dash length (program only allows 1)
+Use template zip, will only add code in 1 .java file (only touch Frame.java)
+dashLength will be a float array of length 1
+Want user to be able to see what they're drawing as it's being drawn (while holding, show)
+Will have ArrayList of shapes, loop through each and call paint(), also allows easy deletion of one
+Need to make 2 lines up top, JFrame w/ border layout, options panel in north, draw panel in center, status label in the south
+	Tons of components in the top (use panels), 1 draw component in the center, 1 label component in south
+	Lines 1 and 2 are normal panels w/ flow, put both in another panel (2 x 1 grid), make BG of panels 1  and 2 light blue color
+Not required but can change background of color chooser to selected title
+Only need event handler on buttons (for top), rest don't matter till we press the button
+	*2 color choose, undo to remove last drawn
+When add new objects, have to redraw everyrging
+For DrawPanel, no panel for middle, specificy has private draw pmel  (????)
+Lots of students add code for EventHandler, but forget to call it as an ActionListener in the outer constructor
+mousePressed: need create stroke var, determine shape and color, create new My[Shape] and add to ArrayList
+	In paintComponent, use for (MyShape shape : shapes) { shape.draw(g2d); }
+To undo, remove shape from ArrayList and redraw: shapes.remove(shapes.size()-1);
+For clear, use shapes.clear()
+Define ArrayList inside the frame, that way easier to access
+	Mouse released on drag: just change endpoint and repaint
+	Mouse pressed just gives start point
+		Point startPoint = new Point(event.getX(), event.getY());
+Only thing in mouse moved is updating the status label

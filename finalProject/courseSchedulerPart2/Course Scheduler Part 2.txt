@@ -1,0 +1,7 @@
+DB stays the same (can use the same zip file)
+Need to add all of the X'ed out methods (from design layout doc) in the Query classes
+Test script starts after Pt 1 test script
+Add StudentID to selecting student?
+Use text area to display all of the changes by dropping a student
+	Order doesn't matter, but should loop through by semester
+Drops need to update combo boxes

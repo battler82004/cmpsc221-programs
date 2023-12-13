@@ -1,0 +1,70 @@
+When working on this project, think about LionPath (more complicated, but good place to look for inspiration)
+2 kinds of users: Admin (this is the data you can work on), Users (I want to do this with that data)
+All commands are done through a GUI
+Course is separate from semester (CMPCS 221), class is a specific course during a specific semester w/ other parameters
+"Final Project Part 1 Test Script" is for helping write the code, also the only thing used for testing the program for grading
+	If your program works well on the script then will get good grade
+	Doesn't cause sql exception, if an error occurs, it's caused by code
+	Decent grading time for part 1, 2 days for 490 students for part 2
+Will give us an initial project which we must use
+Uknown data should only be entered during the add section, rest should be like combo box showing other options
+	From DB, so display it to the user rather than asking them to enter it
+	Never force the user to do things they don't have to just because it's easier
+	If looking at a tab that allows the student to schedule a course, should display "You were scheduled / waitlisted" on that page
+		Shouldn't have to check different page
+	If multiple things happen, need text page to describe what happened
+Submission is different:
+	Submit zipped project folder like normal
+	Also zip DB folder from computer and attach to submission
+	Have unique names for project and DB folder to make it easier: "CourseSchedulerJWT5564" and "CourseSchedulerDBJWT5564"
+Trying to be a pain to copy people
+Can't get a C w/o final project, meant to "be the class," shouldn't be moving on if you can't do this project
+	If don't enjoy final project should probably consider switching majors
+Follow standard and OOP design practices
+	Use SQL to work on table and PreparedStatements instead of concatenated strings (if it's variable)
+
+5 main classes: Student, Class, Course, Semester, Schedule
+	Need eaches member vars and methods
+	* Semester: name (don't need to keep track of when), ex: Fall2024, needs constructor | getter | DB methods (add, get)
+		Full system would need edit and remove for DB, don't care here
+	* Course: code and description (CMPSC 221 and name), needs constructor | getter |
+	* Class: semester, code, max number of students; needs constructor | getters | DB (add, get, drop for part 2)
+	* Student: ID, first name, last name; need: DB (add, get, drop for part 2)
+	* Schedule: semester, class, studentID, status (scheduled or waitlisted), time stamp (to maintain waitlist); need DB (add, get)
+Persistant data from these classes in DB
+Entry classes (5 above) just represent the objects, the Query classes are where we get SQL involved
+SemesterQueries has been implemented and works, use as model to create and test separate Query classes one at a time
+	Don't try to write them all at once
+DB tables are basically just 5 main classes, columns will be properties of classes
+Asterisks represent the PKs of the classes as tables
+Project is a combinataion of OOD, GUIs, and DBs (3 main topics)
+3 Tier Application Development has us separate these 3 aspects into different sections of code
+	GUI works separately from classes which works separately frmo DB Tables
+	GUI doesn't interract w/ DB, could swap whole DBMS and code doesn't change at all (GUI doesn't mess w/, classes uses standard SQL)
+Can drag components onto designer to add stuff to GUI, will need to rename components that you're getting data from
+Add course: needs "Course Code:" [entry box] \n "Course Description:" [entry box], bottom needs JLabel to display status
+	Use spaces as default because if nothing's in it, the size'll shrink so you can't get to it
+MainFrame is GUI code
+For Student tab:
+	Add new tabbed pane, then add 3 panels (which are the tabs), to add 2nd tab place it over the first tabe
+	New tabs: Display Classes, Schedule Class, Display Student Schedule
+Can start working on GUI, DB, and QueryClasses
+	Test class to class rather than doing everything together
+	Prob don't start till after 2 DB vids + one other one
+
+Semester: VARCHAR 30
+CourseCode: VARCHAR 30
+Seats: INTEGER
+Description: VARCHAR 40
+StudentID: VARCHAR 20
+First/LastName: VARCHAR 40
+Status: VARCHAR 20
+Timestamp: TIMESTAMP
+
+Class description used to combine tables
+When bring up netbeans, need to start server
+Look at implementation example, use low seat numbers to make easier
+Can display classes in a JText or a JTable
+Only admin tab has text entry
+Create file for each Java class, watch vid (6:45pm) to generate constructor and getters, just make toString
+6:47pm gives JTable code, rowData length is num of columns
